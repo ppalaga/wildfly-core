@@ -38,8 +38,18 @@ public class CustomHandlerOperationsTestCase extends AbstractLoggingOperationsTe
 
     @Test
     public void testCustomHandler() throws Exception {
+        testCustomHandler("org.jboss.logmanager");
+    }
 
-        testCustomHandler(null);
+    @Test
+    public void testCustomHandlerWithExplicitSlot() throws Exception {
+        /* Although main is the implicit default slot name, it should be enough to ensure that any custom slots will work.
+         * This was added to test WFCORE-1499 */
+        testCustomHandler("org.jboss.logmanager:main");
+    }
+
+    public void testCustomHandler(final String moduleName) throws Exception {
+        testCustomHandler(null, moduleName);
 
         // Create the profile
         final String profileName = "test-profile";
@@ -47,19 +57,19 @@ public class CustomHandlerOperationsTestCase extends AbstractLoggingOperationsTe
         final ModelNode addOp = Operations.createAddOperation(profileAddress);
         executeOperation(addOp);
 
-        testCustomHandler(profileName);
+        testCustomHandler(profileName, moduleName);
 
         // Remove the profile
         executeOperation(Operations.createRemoveOperation(profileAddress));
         verifyRemoved(profileAddress);
     }
 
-    private void testCustomHandler(final String profileName) throws Exception {
+    private void testCustomHandler(final String profileName, final String moduleName) throws Exception {
         final ModelNode address = createCustomHandlerAddress(profileName, "CONSOLE2");
 
         // Add the handler
         final ModelNode addOp = Operations.createAddOperation(address);
-        addOp.get("module").set("org.jboss.logmanager");
+        addOp.get("module").set(moduleName);
         addOp.get("class").set(ConsoleHandler.class.getName());
         executeOperation(addOp);
 
