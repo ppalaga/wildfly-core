@@ -46,6 +46,14 @@
                 <path name="com/ibm/security/auth/module"/>
                 <path name="com/ibm/security/bootstrap"/>
                 <path name="com/ibm/security/util"/>
+                <path name="com/ibm/xtq/xml/xdm"/>
+                <path name="com/ibm/xtq/xml/xdm/ref"/>
+                <path name="com/ibm/xtq/xslt/runtime"/>
+                <path name="com/ibm/xtq/xslt/runtime/extensions"/>
+                <path name="com/ibm/xtq/xslt/runtime/v1"/>
+                <path name="com/ibm/xtq/xslt/runtime/v2"/>
+                <path name="com/ibm/xtq/xslt/translator"/>
+                <path name="org/apache/xml/serializer"/>
             </paths>
         </system>
     </dependencies>

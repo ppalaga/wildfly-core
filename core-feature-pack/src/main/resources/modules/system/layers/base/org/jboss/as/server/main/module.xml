@@ -86,7 +86,7 @@
         <module name="org.jboss.as.protocol">
             <imports>
                 <include path="**" />
-            </imports> 
+            </imports>
         </module>
         <module name="org.jboss.as.remoting"/>
         <module name="org.wildfly.security.elytron-private" services="import"/>

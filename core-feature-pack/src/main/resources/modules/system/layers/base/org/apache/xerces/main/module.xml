@@ -24,12 +24,48 @@
 
 <module xmlns="urn:jboss:module:1.5" name="org.apache.xerces">
 
-    <resources>
-        <artifact name="${xerces:xercesImpl}"/>
-    </resources>
-
     <dependencies>
         <module name="javax.api"/>
+        <module name="sun.jdk"/>
+
+        <system export="true">
+            <paths>
+                <path name="com/sun/org/apache/xerces/internal/dom"/>
+                <path name="com/sun/org/apache/xerces/internal/dom/events"/>
+                <path name="com/sun/org/apache/xerces/internal/impl"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/dtd"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/dtd/models"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/dv"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/dv/dtd"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/dv/util"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/dv/xs"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/io"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/msg"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/validation"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/xpath"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/xpath/regex"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/xs"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/xs/identity"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/xs/models"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/xs/opti"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/xs/traversers"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/xs/util"/>
+                <path name="com/sun/org/apache/xerces/internal/jaxp"/>
+                <path name="com/sun/org/apache/xerces/internal/jaxp/datatype"/>
+                <path name="com/sun/org/apache/xerces/internal/jaxp/validation"/>
+                <path name="com/sun/org/apache/xerces/internal/parsers"/>
+                <path name="com/sun/org/apache/xerces/internal/util"/>
+                <path name="com/sun/org/apache/xerces/internal/utils"/>
+                <path name="com/sun/org/apache/xerces/internal/xinclude"/>
+                <path name="com/sun/org/apache/xerces/internal/xni"/>
+                <path name="com/sun/org/apache/xerces/internal/xni/grammars"/>
+                <path name="com/sun/org/apache/xerces/internal/xni/parser"/>
+                <path name="com/sun/org/apache/xerces/internal/xpointer"/>
+                <path name="com/sun/org/apache/xerces/internal/xs"/>
+                <path name="com/sun/org/apache/xerces/internal/xs/datatypes"/>
+            </paths>
+        </system>
+
     </dependencies>
 
 </module>
