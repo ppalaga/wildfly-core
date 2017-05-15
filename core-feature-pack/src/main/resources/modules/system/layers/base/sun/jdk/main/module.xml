@@ -54,7 +54,13 @@
                 <path name="com/sun/media/sound"/>
                 <path name="com/sun/crypto/provider"/>
                 <path name="com/sun/org/apache/bcel/internal/classfile"/>
+                <path name="com/sun/org/apache/xalan/internal/xsltc"/>
+                <path name="com/sun/org/apache/xalan/internal/xsltc/dom"/>
+                <path name="com/sun/org/apache/xalan/internal/xsltc/runtime"/>
+                <path name="com/sun/org/apache/xml/internal/dtm"/>
+                <path name="com/sun/org/apache/xml/internal/dtm/ref"/>
                 <path name="com/sun/org/apache/xml/internal/security/transforms/implementations"/>
+                <path name="com/sun/org/apache/xml/internal/serializer"/>
                 <path name="com/sun/rowset"/>
                 <path name="com/sun/rowset/providers"/>
                 <path name="com/sun/security/auth"/>
