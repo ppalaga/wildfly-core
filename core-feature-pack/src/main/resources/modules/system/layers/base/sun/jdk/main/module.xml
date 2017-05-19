@@ -57,6 +57,8 @@
                 <path name="com/sun/org/apache/xalan/internal/xsltc"/>
                 <path name="com/sun/org/apache/xalan/internal/xsltc/dom"/>
                 <path name="com/sun/org/apache/xalan/internal/xsltc/runtime"/>
+                <path name="com/sun/org/apache/xerces/internal/dom"/>
+                <path name="com/sun/org/apache/xerces/internal/jaxp"/>
                 <path name="com/sun/org/apache/xml/internal/dtm"/>
                 <path name="com/sun/org/apache/xml/internal/dtm/ref"/>
                 <path name="com/sun/org/apache/xml/internal/security/transforms/implementations"/>
