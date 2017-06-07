@@ -21,26 +21,14 @@
   ~ Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
   ~ 02110-1301 USA, or see the FSF site: http://www.fsf.org.
   -->
-
-<module xmlns="urn:jboss:module:1.5" name="org.jboss.as.standalone">
-    <properties>
-        <property name="jboss.api" value="private"/>
-        <property name="jboss.require-java-version" value="1.8"/>
-    </properties>
-
-    <main-class name="org.jboss.as.server.Main"/>
-
-    <resources>
-    </resources>
-
+<module xmlns="urn:jboss:module:1.5" name="javax.xml.jaxp">
     <dependencies>
-        <module name="javax.api"/>
-        <module name="javax.xml.jaxp" services="import"/>
+        <module name="javax.api" export="true" />
 
-        <module name="org.jboss.logmanager" services="import"/>
-        <module name="org.jboss.as.jmx" services="import"/>
-        <module name="org.jboss.as.server" export="true"/>
-        <module name="org.jboss.vfs" services="import"/>
-        <module name="org.wildfly.security.elytron-private" services="import"/>
+        <!-- Only one of these should be available -->
+        <module name="javax.xml.jaxp.sun" services="import" export="true" optional="true" />
+        <module name="javax.xml.jaxp.ibm" services="import" export="true" optional="true" />
+
+        <module name="org.codehaus.woodstox" services="import" export="true" />
     </dependencies>
 </module>

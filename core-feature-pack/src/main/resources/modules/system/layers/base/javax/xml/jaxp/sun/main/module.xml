@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ JBoss, Home of Professional Open Source.
+  ~ Copyright 2010, Red Hat, Inc., and individual contributors
+  ~ as indicated by the @author tags. See the copyright.txt file in the
+  ~ distribution for a full listing of individual contributors.
+  ~
+  ~ This is free software; you can redistribute it and/or modify it
+  ~ under the terms of the GNU Lesser General Public License as
+  ~ published by the Free Software Foundation; either version 2.1 of
+  ~ the License, or (at your option) any later version.
+  ~
+  ~ This software is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  ~ Lesser General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU Lesser General Public
+  ~ License along with this software; if not, write to the Free
+  ~ Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+  ~ 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+  -->
+<module xmlns="urn:jboss:module:1.5" name="javax.xml.jaxp.sun">
+    <dependencies>
+        <system export="true">
+            <paths>
+                <path name="com/sun/org/apache/xalan/internal"/>
+                <path name="com/sun/org/apache/xalan/internal/extensions"/>
+                <path name="com/sun/org/apache/xalan/internal/lib"/>
+                <path name="com/sun/org/apache/xalan/internal/res"/>
+                <path name="com/sun/org/apache/xalan/internal/templates"/>
+                <path name="com/sun/org/apache/xalan/internal/utils"/>
+                <path name="com/sun/org/apache/xalan/internal/xslt"/>
+                <path name="com/sun/org/apache/xalan/internal/xsltc"/>
+                <path name="com/sun/org/apache/xalan/internal/xsltc/cmdline"/>
+                <path name="com/sun/org/apache/xalan/internal/xsltc/cmdline/getopt"/>
+                <path name="com/sun/org/apache/xalan/internal/xsltc/compiler"/>
+                <path name="com/sun/org/apache/xalan/internal/xsltc/compiler/util"/>
+                <path name="com/sun/org/apache/xalan/internal/xsltc/dom"/>
+                <path name="com/sun/org/apache/xalan/internal/xsltc/runtime"/>
+                <path name="com/sun/org/apache/xalan/internal/xsltc/runtime/output"/>
+                <path name="com/sun/org/apache/xalan/internal/xsltc/trax"/>
+                <path name="com/sun/org/apache/xalan/internal/xsltc/util"/>
+                <path name="com/sun/org/apache/xerces/internal/dom"/>
+                <path name="com/sun/org/apache/xerces/internal/dom/events"/>
+                <path name="com/sun/org/apache/xerces/internal/impl"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/dtd"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/dtd/models"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/dv"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/dv/dtd"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/dv/util"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/dv/xs"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/io"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/msg"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/validation"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/xpath"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/xpath/regex"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/xs"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/xs/identity"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/xs/models"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/xs/opti"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/xs/traversers"/>
+                <path name="com/sun/org/apache/xerces/internal/impl/xs/util"/>
+                <path name="com/sun/org/apache/xerces/internal/jaxp"/>
+                <path name="com/sun/org/apache/xerces/internal/jaxp/datatype"/>
+                <path name="com/sun/org/apache/xerces/internal/jaxp/validation"/>
+                <path name="com/sun/org/apache/xerces/internal/parsers"/>
+                <path name="com/sun/org/apache/xerces/internal/util"/>
+                <path name="com/sun/org/apache/xerces/internal/utils"/>
+                <path name="com/sun/org/apache/xerces/internal/xinclude"/>
+                <path name="com/sun/org/apache/xerces/internal/xni"/>
+                <path name="com/sun/org/apache/xerces/internal/xni/grammars"/>
+                <path name="com/sun/org/apache/xerces/internal/xni/parser"/>
+                <path name="com/sun/org/apache/xerces/internal/xpointer"/>
+                <path name="com/sun/org/apache/xerces/internal/xs"/>
+                <path name="com/sun/org/apache/xerces/internal/xs/datatypes"/>
+                <path name="com/sun/org/apache/xml/internal/dtm"/>
+                <path name="com/sun/org/apache/xml/internal/dtm/ref"/>
+                <path name="com/sun/org/apache/xml/internal/dtm/ref/dom2dtm"/>
+                <path name="com/sun/org/apache/xml/internal/dtm/ref/sax2dtm"/>
+                <path name="com/sun/org/apache/xml/internal/res"/>
+                <path name="com/sun/org/apache/xml/internal/resolver"/>
+                <path name="com/sun/org/apache/xml/internal/resolver/helpers"/>
+                <path name="com/sun/org/apache/xml/internal/resolver/readers"/>
+                <path name="com/sun/org/apache/xml/internal/resolver/tools"/>
+                <path name="com/sun/org/apache/xml/internal/security"/>
+                <path name="com/sun/org/apache/xml/internal/security/algorithms"/>
+                <path name="com/sun/org/apache/xml/internal/security/algorithms/implementations"/>
+                <path name="com/sun/org/apache/xml/internal/security/c14n"/>
+                <path name="com/sun/org/apache/xml/internal/security/c14n/helper"/>
+                <path name="com/sun/org/apache/xml/internal/security/c14n/implementations"/>
+                <path name="com/sun/org/apache/xml/internal/security/encryption"/>
+                <path name="com/sun/org/apache/xml/internal/security/exceptions"/>
+                <path name="com/sun/org/apache/xml/internal/security/keys"/>
+                <path name="com/sun/org/apache/xml/internal/security/keys/content"/>
+                <path name="com/sun/org/apache/xml/internal/security/keys/content/keyvalues"/>
+                <path name="com/sun/org/apache/xml/internal/security/keys/content/x509"/>
+                <path name="com/sun/org/apache/xml/internal/security/keys/keyresolver"/>
+                <path name="com/sun/org/apache/xml/internal/security/keys/keyresolver/implementations"/>
+                <path name="com/sun/org/apache/xml/internal/security/keys/storage"/>
+                <path name="com/sun/org/apache/xml/internal/security/keys/storage/implementations"/>
+                <path name="com/sun/org/apache/xml/internal/security/signature"/>
+                <path name="com/sun/org/apache/xml/internal/security/signature/reference"/>
+                <path name="com/sun/org/apache/xml/internal/security/transforms"/>
+                <path name="com/sun/org/apache/xml/internal/security/transforms/implementations"/>
+                <path name="com/sun/org/apache/xml/internal/security/transforms/params"/>
+                <path name="com/sun/org/apache/xml/internal/security/utils"/>
+                <path name="com/sun/org/apache/xml/internal/security/utils/resolver"/>
+                <path name="com/sun/org/apache/xml/internal/security/utils/resolver/implementations"/>
+                <path name="com/sun/org/apache/xml/internal/serialize"/>
+                <path name="com/sun/org/apache/xml/internal/serializer"/>
+                <path name="com/sun/org/apache/xml/internal/serializer/utils"/>
+                <path name="com/sun/org/apache/xml/internal/utils"/>
+                <path name="com/sun/org/apache/xml/internal/utils/res"/>
+                <path name="com/sun/org/apache/xpath/internal"/>
+                <path name="com/sun/org/apache/xpath/internal/axes"/>
+                <path name="com/sun/org/apache/xpath/internal/compiler"/>
+                <path name="com/sun/org/apache/xpath/internal/domapi"/>
+                <path name="com/sun/org/apache/xpath/internal/functions"/>
+                <path name="com/sun/org/apache/xpath/internal/jaxp"/>
+                <path name="com/sun/org/apache/xpath/internal/objects"/>
+                <path name="com/sun/org/apache/xpath/internal/operations"/>
+                <path name="com/sun/org/apache/xpath/internal/patterns"/>
+                <path name="com/sun/org/apache/xpath/internal/res"/>
+                <path name="com/sun/xml/internal/stream"/>
+            </paths>
+        </system>
+    </dependencies>
+</module>
