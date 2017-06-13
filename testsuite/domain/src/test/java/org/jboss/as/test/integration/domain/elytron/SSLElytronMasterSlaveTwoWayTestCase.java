@@ -28,6 +28,7 @@ import org.jboss.as.test.integration.domain.AbstractSSLMasterSlaveTestCase;
 import org.jboss.as.test.integration.domain.management.util.DomainTestSupport;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -35,6 +36,7 @@ import org.junit.Test;
  *
  * @author Richard Janík <rjanik@redhat.com>
  */
+@Ignore
 public class SSLElytronMasterSlaveTwoWayTestCase extends AbstractSSLMasterSlaveTestCase {
 
     private static final File WORK_DIR = new File("target" + File.separatorChar +  "ssl-master-slave-2way-workdir-elytron");
