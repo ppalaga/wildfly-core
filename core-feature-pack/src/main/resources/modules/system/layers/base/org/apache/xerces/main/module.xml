@@ -23,14 +23,8 @@
   -->
 
 <module xmlns="urn:jboss:module:1.5" name="org.apache.xerces">
-
-    <resources>
-        <artifact name="${xerces:xercesImpl}"/>
-    </resources>
-
     <dependencies>
-        <module name="javax.api"/>
+        <module name="sun.jdk" export="true"/>
+        <module name="ibm.jdk" export="true"/>
     </dependencies>
-
 </module>
-

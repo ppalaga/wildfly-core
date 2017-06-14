@@ -47,7 +47,6 @@
              behavior. Please discuss any design changes in this area on the WildFly development
              mailing list before enacting.
         -->
-        <module name="org.apache.xerces" services="import"/>
         <module name="org.codehaus.woodstox" services="import"/>
         <!-- END JAXP default dependencies -->
 
