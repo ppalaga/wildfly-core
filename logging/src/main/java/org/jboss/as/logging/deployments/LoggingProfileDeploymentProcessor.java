@@ -37,6 +37,8 @@ import org.jboss.as.server.deployment.DeploymentUnitProcessor;
 import org.jboss.as.server.deployment.module.ResourceRoot;
 import org.jboss.logmanager.LogContext;
 import org.jboss.modules.Module;
+import org.jboss.modules.ModuleIdentifier;
+import org.jboss.modules.ModuleLoadException;
 
 /**
  * @author <a href="mailto:jperkins@redhat.com">James R. Perkins</a>
@@ -63,6 +65,16 @@ public class LoggingProfileDeploymentProcessor extends AbstractLoggingDeployment
                 final LogContext logContext = loggingProfileContext.get(loggingProfile);
                 LoggingLogger.ROOT_LOGGER.tracef("Registering log context '%s' on '%s' for profile '%s'", logContext, root, loggingProfile);
                 registerLogContext(deploymentUnit, module, logContext);
+
+                // Force the camel-core ModuleClassLoader to be associated with the logContext
+                try {
+                    LoggingLogger.ROOT_LOGGER.info("Add camel module ClassLoader");
+                    Module camelModule = Module.getCallerModuleLoader().loadModule(ModuleIdentifier.create("org.apache.camel.core"));
+                    registerLogContext(deploymentUnit, camelModule, logContext);
+                } catch (ModuleLoadException e) {
+                    // Ignore
+                }
+
                 loggingConfigurationService = new LoggingConfigurationService(ConfigurationPersistence.getConfigurationPersistence(logContext), "profile-" + loggingProfile);
                 // Process sub-deployments
                 for (DeploymentUnit subDeployment : subDeployments) {
